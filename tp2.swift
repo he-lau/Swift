@@ -139,38 +139,99 @@ for i in 0...N-1 {
 }
 
 // EXERCICE 7
-
 var a: Int = 2
-var b: Int = 2
-var c: Int = 2
+var b: Int = 9
+var c: Int = -5
 
 var delta: Double = Double(b*b-4*a*c)
 
 var x1:Double
 var x2:Double
 
-
 if(delta>0) {
-  print("Il y a 2 solutions.")
+  print("Il y a 2 solutions :")
+  
+  x1 = (Double(-b)+delta.squareRoot())/Double(2*a)
+  x2 = (Double(-b)-delta.squareRoot())/Double(2*a)
 
-  
-  x1 = Double((Double(-b)+delta.squareRoot()))
-  
-              
+  print("x1 = \(x1)")
+  print("x2 = \(x2)")
+            
 }
 else if (delta==0) {
-  print("Il y a 1 solution.")
+  print("Il y a 1 solution :")
+
+  x1 = Double(-b)/Double(2*a)
+  print("x1 = \(x1)")
                     
 }
 else {
       print("Il n'y a pas de solutions.")
 }
 
-
-
 // EXERCICE 8
 
+let choix: Int
+
+let addition:(Double, Double) -> Double = (+)
+let soustraction:(Double, Double) -> Double = (-)
+let multiplication:(Double, Double) -> Double = (*)
+let division:(Double, Double) -> Double = (/)
+
+//print(addition(3,2))
+
+
+print("0peration (a,b):")
+print("[0] a+b")
+print("[1] a-b")
+print("[2] a*b")
+print("[3] a/b")
+
+choix = Int(readLine()!)!
+
+var a_:Double
+var b_:Double
+
+print("a? :")
+a_ = Double(readLine()!)!
+print("b? :")
+b_ = Double(readLine()!)!
+
+switch choix {
+  case 0 : print("\(a_) + \(b_) = \(addition(a_,b_))")
+  case 1 : print("\(a_) - \(b_) = \(soustraction(a_,b_))")
+  case 2 : print("\(a_) * \(b_) = \(multiplication(a_,b_))")
+
+  case 3 : 
+    if(b_==0) {
+      print("erreur : division par 0 !")
+    }
+    else {
+          print("\(a_) / \(b_) = \(division(a_,b_))")
+    }
+  
+  default : print("")
+}
 // EXERCICE 9
+
+let entree: Int = 1329
+var annees: Int 
+var semaines: Int 
+var jours: Int 
+
+// distributions 
+
+annees = entree/365
+semaines = entree%365/7
+jours = entree%365%7
+
+print("Entree : ")
+print("  Nombre de jours : \(entree) ")
+
+print("Sortie : ")
+print("  Années : \(annees) ")
+print("  Semaines : \(semaines) ")
+print("  Jours : \(jours) ")
 
 
 
