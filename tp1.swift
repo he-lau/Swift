@@ -3,7 +3,6 @@
 */
 
 // EXERCICE 1
-
 var a: Int = 0
 var b: Float = 7.0
 var car: Character = "!"
@@ -12,14 +11,12 @@ var chaine: String = "Hello world"
 print(a,b," : ",chaine,car)
 
 // EXERCICE 2
-
 var x: Int = 2
 var y: Int = 3
 
 print(x," x ",y," = ",x*y)
 
 // EXERCICE 3
-
 var permute: Int = y
 y = x
 x = permute
@@ -27,7 +24,6 @@ x = permute
 print(x," x ",y," = ",x*y)
 
 // EXERCICE 4
-
 var somme: Int = 0
 print("Entrer une première valeur : ")
 somme += Int(readLine()!)!
@@ -39,7 +35,6 @@ somme += Int(readLine()!)!
 print("La somme : \(somme)")
 
 // EXERCICE 5
-
 somme = 0
 
 print("Entrer une première valeur : ")
@@ -53,7 +48,6 @@ var avg: Int = Int(somme/3)
 print("La moyenne : \(avg)")
 
 // EXERCICE 6
-
 if(a==Int(b)) {
       print("A == B")
 }
@@ -65,7 +59,6 @@ else if(a>Int(b)) {
 }
 
 // EXERCICE 7
-
 var pair: Int = 2
 
 if(pair%2==1)  {
@@ -76,7 +69,6 @@ else if(pair%2==0){
 }
 
 // EXERCICE 8
-
 var choix: Int = 0
 var number: Int = 0
 
@@ -99,15 +91,14 @@ switch choix
 }
 
 // EXERCICE 9
-
 var annee: Int 
 
 print("Entrer une année : ")
 annee = Int(readLine()!)!
 
-if(annee%4==0||annee%400==0){
+if(annee%4==0 && (annee%100==0 && annee%400==0)){
      print("\(annee) est bissextile.")
 }
-else if(annee%100==0){
+else {
      print("\(annee) est non bissextile.")
 }
